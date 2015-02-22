@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="DBMapping.BOL" assembly="DBMapping">
+  <class name="DBMapping.BOL.Receipt, DBMapping" table="receipt" lazy="false">
+    <id name="ID">
+      <column name="ID"/>
+      <generator class="native"/>
+    </id>
+
+    <many-to-one name="Customer" class="Contacts" column="Customer" cascade="none" lazy="false"></many-to-one>
+    <many-to-one name="Agent" class="Contacts" column="Agent" cascade="none" lazy="false"></many-to-one>
+
+    <property name="ReceiptDate" column="Receipt_Date" />
+    <property name="isDeleted" />
+    <property name="ReceiptAmount" />
+    <property name="PaidAmount"/>
+    <property name="PO"/>
+    <property name="UpdateDate"/>
+  </class>
+</hibernate-mapping>

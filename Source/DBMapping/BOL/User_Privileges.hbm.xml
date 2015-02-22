@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="DBMapping.BOL" assembly="DBMapping">
+  <class name="DBMapping.BOL.User_Privileges, DBMapping" table="user_privileges" lazy="false">
+    <id name="ID">
+      <column name="ID"/>
+      <generator class="native"/>
+    </id>
+
+    <property name="Role" />
+    <property name="Inventory_Add" />
+    <property name="Inventory_Edit" />
+    <property name="Inventory_View" />
+    <property name="Invoice_Add" />
+    <property name="Invoice_Edit" />
+    <property name="Invoice_View" />
+    <property name="Receipt_Add" />
+    <property name="Receipt_Edit" />
+    <property name="Receipt_View" />
+    <property name="Contacts" />
+
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{637C6EA4-4BDA-4C15-9AA2-9D483C426FCB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DBMapping</RootNamespace>
+    <AssemblyName>DBMapping</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data.Entity, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\..\..\_Shared\NHibernate\Required_Bins\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BOL\Contacts.cs" />
+    <Compile Include="BOL\Forwarders.cs" />
+    <Compile Include="BOL\InvoiceType.cs" />
+    <Compile Include="BOL\Item.cs" />
+    <Compile Include="BOL\ItemSizes.cs" />
+    <Compile Include="BOL\Receipt.cs" />
+    <Compile Include="BOL\ReceiptDetails.cs" />
+    <Compile Include="BOL\RetailInvoice.cs" />
+    <Compile Include="BOL\RetailInvoiceDetails.cs" />
+    <Compile Include="BOL\RetailSeries.cs" />
+    <Compile Include="BOL\SalesInvoice.cs" />
+    <Compile Include="BOL\SalesInvoiceDetails.cs" />
+    <Compile Include="BOL\SortedSize.cs" />
+    <Compile Include="BOL\User.cs" />
+    <Compile Include="BOL\User_Privileges.cs" />
+    <Compile Include="BOL\Weight.cs" />
+    <Compile Include="clsDbConnect.cs" />
+    <Compile Include="DAL\ContactsDao.cs" />
+    <Compile Include="DAL\ForwardersDao.cs" />
+    <Compile Include="DAL\GenericDao.cs" />
+    <Compile Include="DAL\InvoiceTypeDao.cs" />
+    <Compile Include="DAL\ItemDao.cs" />
+    <Compile Include="DAL\ItemSizesDao.cs" />
+    <Compile Include="DAL\ReceiptDao.cs" />
+    <Compile Include="DAL\RetailInvoiceDao.cs" />
+    <Compile Include="DAL\RetailSeriesDao.cs" />
+    <Compile Include="DAL\SalesInvoiceDao.cs" />
+    <Compile Include="DAL\SalesInvoiceDetailsDao.cs" />
+    <Compile Include="DAL\SortedSizeDao.cs" />
+    <Compile Include="DAL\UserDao.cs" />
+    <Compile Include="DAL\User_PrivilegesDao.cs" />
+    <Compile Include="DAL\WeightDao.cs" />
+    <Compile Include="Factories\myORM.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BOL\Forwarders.hbm.xml" />
+    <EmbeddedResource Include="BOL\InvoiceType.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BOL\Contacts.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BOL\Item.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BOL\SalesInvoice.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BOL\SalesInvoiceDetails.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BOL\ItemSizes.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BOL\Receipt.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BOL\ReceiptDetails.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BOL\Weight.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BOL\User.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BOL\User_Privileges.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BOL\RetailInvoice.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BOL\RetailInvoiceDetails.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BOL\RetailSeries.hbm.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

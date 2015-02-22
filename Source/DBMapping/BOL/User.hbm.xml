@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="DBMapping.BOL" assembly="DBMapping">
+  <class name="DBMapping.BOL.User, DBMapping" table="user" lazy="false">
+    <id name="ID">
+      <column name="ID"/>
+      <generator class="native"/>
+    </id>
+
+    <property name="username" />
+    <property name="password" />
+    <property name="authentication" />
+    <property name="fname" />
+    <property name="lname" />
+    
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="DBMapping.BOL" assembly="DBMapping">
+  <class name="DBMapping.BOL.RetailSeries, DBMapping" table="retailinvoice_series" lazy="false">
+    <id name="ID">
+      <column name="ID"/>
+      <generator class="native"/>
+    </id>
+    
+    <many-to-one name="Type" class="InvoiceType" column="invoicetypeID" cascade="none" lazy="false"></many-to-one>
+    
+    <property name="Start_series" column="start" />
+    <property name="End_series" column="end" />
+    <property name="Current" column="current_in_stack"/>
+    <property name="Status" column="status"/>
+    <property name="dte" column="Date"/>
+    <property name="updated" column="DateUpdated"/>
+  </class>
+</hibernate-mapping>

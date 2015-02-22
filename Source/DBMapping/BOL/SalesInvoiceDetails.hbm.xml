@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="DBMapping.BOL" assembly="DBMapping">
+  <class name="DBMapping.BOL.SalesInvoiceDetails, DBMapping" table="salesinvoicedetails" lazy="false">
+    <id name="ID">
+      <column name="ID"/>
+      <generator class="native"/>
+    </id>
+
+    <many-to-one name="salesinvoice" class="SalesInvoice" column="SI_ID" cascade="none" lazy="false"></many-to-one>
+    
+    <many-to-one name="item" class="Item" column="ItemID" cascade="none" lazy="false"></many-to-one>
+    
+    <property name="QTY" />
+    <property name="Discount" />
+    <property name="Price" column="UnitPrice"/>
+
+  </class>
+</hibernate-mapping>

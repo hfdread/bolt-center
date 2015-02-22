@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="DBMapping.BOL" assembly="DBMapping">
+  <class name="DBMapping.BOL.RetailInvoice, DBMapping" table="retailinvoice" lazy="false">
+    <id name="ID">
+      <column name="ID"/>
+      <generator class="native"/>
+    </id>
+
+    <property name="or_number" column="ORNumber" />
+    <property name="or_date" column="Date" />
+    <property name="Customer"/>
+    <property name="TIN"/>
+    <property name="Address"/>
+    <property name="BusinessStyle"/>
+    <property name="Terms"/>
+    <property name="OSCA_PWD_ID"/>
+    <property name="VAT" column="VatAmt"/>
+    <property name="TOTAL" column="TotalAmt"/>
+    <property name="updated" column="UpdatedDate"/>
+  </class>
+</hibernate-mapping>

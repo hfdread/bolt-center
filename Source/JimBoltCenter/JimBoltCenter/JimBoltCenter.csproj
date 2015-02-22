@@ -1,0 +1,585 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5558665E-FA2F-4865-982C-9CC20C4C13D8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JimBoltCenter</RootNamespace>
+    <AssemblyName>JimBoltCenter</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v11.2.Core, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v11.2.Core, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v11.2.Core, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v11.2.Core, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\..\..\..\..\_Shared\NHibernate\Required_Bins\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\..\..\..\_Shared\NHibernate\Required_Bins\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BoltCenterSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BoltCenterSplash.Designer.cs">
+      <DependentUpon>BoltCenterSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDBConnect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDBConnect.Designer.cs">
+      <DependentUpon>frmDBConnect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmEditPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEditPass.Designer.cs">
+      <DependentUpon>frmEditPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmGenericPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmGenericPopup.Designer.cs">
+      <DependentUpon>frmGenericPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MyMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MyMessageBox.Designer.cs">
+      <DependentUpon>MyMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WaitForm1.Designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\rptInvoice.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptInvoice.Designer.cs">
+      <DependentUpon>rptInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptPackingList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptPackingList.Designer.cs">
+      <DependentUpon>rptPackingList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptViewInventory.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptViewInventory.Designer.cs">
+      <DependentUpon>rptViewInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptViewInvoice.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptViewInvoice.Designer.cs">
+      <DependentUpon>rptViewInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptViewReceipt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptViewReceipt.Designer.cs">
+      <DependentUpon>rptViewReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptViewRetailSeries.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptViewRetailSeries.Designer.cs">
+      <DependentUpon>rptViewRetailSeries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Controls\CustomControls\uctlDateRange.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Controls\CustomControls\uctlDateRange.Designer.cs">
+      <DependentUpon>uctlDateRange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Controls\Maintenance\uctlAddSizes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Controls\Maintenance\uctlAddSizes.Designer.cs">
+      <DependentUpon>uctlAddSizes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Controls\Maintenance\uctlItemProfiles.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Controls\Maintenance\uctlItemProfiles.Designer.cs">
+      <DependentUpon>uctlItemProfiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Controls\Maintenance\uctlManageForwarders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Controls\Maintenance\uctlManageForwarders.Designer.cs">
+      <DependentUpon>uctlManageForwarders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Controls\Maintenance\uctlManageInvoiceType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Controls\Maintenance\uctlManageInvoiceType.Designer.cs">
+      <DependentUpon>uctlManageInvoiceType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Controls\Maintenance\uctlManageSizes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Controls\Maintenance\uctlManageSizes.Designer.cs">
+      <DependentUpon>uctlManageSizes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Controls\Transactions\uctlEditRowInvoice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Controls\Transactions\uctlEditRowInvoice.Designer.cs">
+      <DependentUpon>uctlEditRowInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Controls\Transactions\uctlEditRowReceipt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Controls\Transactions\uctlEditRowReceipt.Designer.cs">
+      <DependentUpon>uctlEditRowReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Controls\Transactions\uctlRetailInvoice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Controls\Transactions\uctlRetailInvoice.Designer.cs">
+      <DependentUpon>uctlRetailInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Controls\UserAccount\uctlEditPass.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Controls\UserAccount\uctlEditPass.Designer.cs">
+      <DependentUpon>uctlEditPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Controls\UserAccount\uctlLogin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Controls\UserAccount\uctlLogin.Designer.cs">
+      <DependentUpon>uctlLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Controls\UserAccount\uctlManageUsers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Controls\UserAccount\uctlManageUsers.Designer.cs">
+      <DependentUpon>uctlManageUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Controls\Maintenance\uctlManageWeight.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Controls\Maintenance\uctlManageWeight.Designer.cs">
+      <DependentUpon>uctlManageWeight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Controls\Maintenance\uctlQuickAddContact.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Controls\Maintenance\uctlQuickAddContact.Designer.cs">
+      <DependentUpon>uctlQuickAddContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Controls\Maintenance\uctlQuickAddForwarder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Controls\Maintenance\uctlQuickAddForwarder.Designer.cs">
+      <DependentUpon>uctlQuickAddForwarder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Controls\Maintenance\uctlQuickAddInvoiceTypes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Controls\Maintenance\uctlQuickAddInvoiceTypes.Designer.cs">
+      <DependentUpon>uctlQuickAddInvoiceTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Controls\Maintenance\uctlQuickAddSize.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Controls\Maintenance\uctlQuickAddSize.Designer.cs">
+      <DependentUpon>uctlQuickAddSize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Controls\Maintenance\uctlTools.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Controls\Maintenance\uctlTools.Designer.cs">
+      <DependentUpon>uctlTools.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Controls\Transactions\uctlAddItem_Invoice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Controls\Transactions\uctlAddItem_Invoice.Designer.cs">
+      <DependentUpon>uctlAddItem_Invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Controls\Transactions\uctlAddItem_Invoice_Change.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Controls\Transactions\uctlAddItem_Invoice_Change.Designer.cs">
+      <DependentUpon>uctlAddItem_Invoice_Change.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Controls\Transactions\uctlAddItem_Receipt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Controls\Transactions\uctlAddItem_Receipt.Designer.cs">
+      <DependentUpon>uctlAddItem_Receipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Controls\Transactions\uctlInvoice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Controls\Transactions\uctlInvoice.Designer.cs">
+      <DependentUpon>uctlInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Controls\Transactions\uctlIssueReceipt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Controls\Transactions\uctlIssueReceipt.Designer.cs">
+      <DependentUpon>uctlIssueReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Controls\Transactions\uctlItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Controls\Transactions\uctlItem.Designer.cs">
+      <DependentUpon>uctlItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Controls\Viewers\uctlContact.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Controls\Viewers\uctlContact.Designer.cs">
+      <DependentUpon>uctlContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Controls\Viewers\uctlEnterConverted.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Controls\Viewers\uctlEnterConverted.Designer.cs">
+      <DependentUpon>uctlEnterConverted.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Controls\Viewers\uctlItemBreakDown.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Controls\Viewers\uctlItemBreakDown.Designer.cs">
+      <DependentUpon>uctlItemBreakDown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Controls\Viewers\uctlMultiAddItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Controls\Viewers\uctlMultiAddItem.Designer.cs">
+      <DependentUpon>uctlMultiAddItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Controls\Viewers\uctlNameChange.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Controls\Viewers\uctlNameChange.Designer.cs">
+      <DependentUpon>uctlNameChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Controls\Viewers\uctlPassword.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Controls\Viewers\uctlPassword.Designer.cs">
+      <DependentUpon>uctlPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Controls\Viewers\uctlViewInventory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Controls\Viewers\uctlViewInventory.Designer.cs">
+      <DependentUpon>uctlViewInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Controls\Viewers\uctlViewInvoice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Controls\Viewers\uctlViewInvoice.Designer.cs">
+      <DependentUpon>uctlViewInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Controls\Viewers\uctlViewReceipts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Controls\Viewers\uctlViewReceipts.Designer.cs">
+      <DependentUpon>uctlViewReceipts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Controls\Viewers\uctlViewRetailSeries.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Controls\Viewers\uctlViewRetailSeries.Designer.cs">
+      <DependentUpon>uctlViewRetailSeries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\cUtils.cs" />
+    <Compile Include="Utils\formUtils.cs" />
+    <Compile Include="Utils\Skin.cs" />
+    <EmbeddedResource Include="Forms\BoltCenterSplash.resx">
+      <DependentUpon>BoltCenterSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDBConnect.resx">
+      <DependentUpon>frmDBConnect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEditPass.resx">
+      <DependentUpon>frmEditPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmGenericPopup.resx">
+      <DependentUpon>frmGenericPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MyMessageBox.resx">
+      <DependentUpon>MyMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\rptInvoice.resx">
+      <DependentUpon>rptInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptPackingList.resx">
+      <DependentUpon>rptPackingList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptViewInventory.resx">
+      <DependentUpon>rptViewInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptViewInvoice.resx">
+      <DependentUpon>rptViewInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptViewReceipt.resx">
+      <DependentUpon>rptViewReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptViewRetailSeries.resx">
+      <DependentUpon>rptViewRetailSeries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Controls\CustomControls\uctlDateRange.resx">
+      <DependentUpon>uctlDateRange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Controls\Maintenance\uctlAddSizes.resx">
+      <DependentUpon>uctlAddSizes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Controls\Maintenance\uctlItemProfiles.resx">
+      <DependentUpon>uctlItemProfiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Controls\Maintenance\uctlManageForwarders.resx">
+      <DependentUpon>uctlManageForwarders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Controls\Maintenance\uctlManageInvoiceType.resx">
+      <DependentUpon>uctlManageInvoiceType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Controls\Maintenance\uctlManageSizes.resx">
+      <DependentUpon>uctlManageSizes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Controls\Transactions\uctlEditRowInvoice.resx">
+      <DependentUpon>uctlEditRowInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Controls\Transactions\uctlEditRowReceipt.resx">
+      <DependentUpon>uctlEditRowReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Controls\Transactions\uctlRetailInvoice.resx">
+      <DependentUpon>uctlRetailInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Controls\UserAccount\uctlEditPass.resx">
+      <DependentUpon>uctlEditPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Controls\UserAccount\uctlLogin.resx">
+      <DependentUpon>uctlLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Controls\UserAccount\uctlManageUsers.resx">
+      <DependentUpon>uctlManageUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Controls\Maintenance\uctlManageWeight.resx">
+      <DependentUpon>uctlManageWeight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Controls\Maintenance\uctlQuickAddContact.resx">
+      <DependentUpon>uctlQuickAddContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Controls\Maintenance\uctlQuickAddForwarder.resx">
+      <DependentUpon>uctlQuickAddForwarder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Controls\Maintenance\uctlQuickAddInvoiceTypes.resx">
+      <DependentUpon>uctlQuickAddInvoiceTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Controls\Maintenance\uctlQuickAddSize.resx">
+      <DependentUpon>uctlQuickAddSize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Controls\Maintenance\uctlTools.resx">
+      <DependentUpon>uctlTools.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Controls\Transactions\uctlAddItem_Invoice.resx">
+      <DependentUpon>uctlAddItem_Invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Controls\Transactions\uctlAddItem_Invoice_Change.resx">
+      <DependentUpon>uctlAddItem_Invoice_Change.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Controls\Transactions\uctlAddItem_Receipt.resx">
+      <DependentUpon>uctlAddItem_Receipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Controls\Transactions\uctlInvoice.resx">
+      <DependentUpon>uctlInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Controls\Transactions\uctlIssueReceipt.resx">
+      <DependentUpon>uctlIssueReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Controls\Transactions\uctlItem.resx">
+      <DependentUpon>uctlItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Controls\Viewers\uctlContact.resx">
+      <DependentUpon>uctlContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Controls\Viewers\uctlEnterConverted.resx">
+      <DependentUpon>uctlEnterConverted.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Controls\Viewers\uctlItemBreakDown.resx">
+      <DependentUpon>uctlItemBreakDown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Controls\Viewers\uctlMultiAddItem.resx">
+      <DependentUpon>uctlMultiAddItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Controls\Viewers\uctlNameChange.resx">
+      <DependentUpon>uctlNameChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Controls\Viewers\uctlPassword.resx">
+      <DependentUpon>uctlPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Controls\Viewers\uctlViewInventory.resx">
+      <DependentUpon>uctlViewInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Controls\Viewers\uctlViewInvoice.resx">
+      <DependentUpon>uctlViewInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Controls\Viewers\uctlViewReceipts.resx">
+      <DependentUpon>uctlViewReceipts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Controls\Viewers\uctlViewRetailSeries.resx">
+      <DependentUpon>uctlViewRetailSeries.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\DBMapping\DBMapping.csproj">
+      <Project>{637C6EA4-4BDA-4C15-9AA2-9D483C426FCB}</Project>
+      <Name>DBMapping</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_btn_2.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

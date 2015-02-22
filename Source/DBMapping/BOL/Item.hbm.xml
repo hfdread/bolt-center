@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="DBMapping.BOL" assembly="DBMapping">
+  <class name="DBMapping.BOL.Item, DBMapping" table="item" lazy="false">
+    <id name="ID">
+      <column name="ID"/>
+      <generator class="native"/>
+    </id>
+
+    <many-to-one name="Size" class="ItemSizes" column="SizeID" cascade="none" lazy="false"></many-to-one>
+    
+    <property name="Name" />
+    <property name="Description" />
+    <property name="Code" />
+    <property name="Unit" />
+    <property name="Unit2"/>
+    <property name="UnitPrice" />
+    <property name="UnitPrice2" column="UnitPrice_2"/>
+    <property name="LastPrice" />
+    <property name="RetailPrice" />
+    <property name="LowThreshold"/>
+    <property name="OnHand"/>
+    <property name="OnHandWeight"/>
+    <property name="UpdateDate" />
+    <property name="CreateDate" />
+  </class>
+</hibernate-mapping>
